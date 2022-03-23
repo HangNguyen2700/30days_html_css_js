@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800&display=swap');
+
+
+:root{
+    --primary-color: #f2726a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height:100vh; /* vh: 100% so voi viewpoint, %: so voi it's container */
+    background: linear-gradient(90deg, #00853e, #50c878);
+    display: flex;
+    justify-content: center; /* center truc x */
+    align-items: center; /* center truc y */
+    font-family: Poppins;
+    color: #fff;
+}
+
+.card{
+    width: 300px;
+    height: 400px;
+    background: #242628;
+    border-radius: 10px;
+    text-align: center;  /* chu: center, img: chua center */
+    overflow: hidden;
+    margin: 0 25px;
+}
+
+.card_img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    overflow: hidden; /* dua img xuong duoi card_img */
+    margin: 0 auto; 
+    transform: translateY(25px);
+    transition: 0.5s;
+}
+
+img{
+    object-fit: cover;
+    width: 100%;   
+    height: 100%;
+    object-position: center;
+}
+
+.card h2{
+    margin: 25px 0;
+    color: var(--primary-color);
+}
+
+.card_social{
+    margin: 25px 0;
+}
+
+.card_social a{
+    color: #fff;
+    margin: 30px 20px;
+    font-size: 25px;
+}
+
+.card_social a:hover{
+    color: var(--primary-color);
+}
+
+.card button{
+    width: 150px;
+    height: 40px;
+    background: transparent;
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.card button:hover{
+    background: var(--primary-color);
+    transform: scale(0.9);
+}
+
+.card .card_img:hover{
+    width: 100%;
+    height: 100%;
+    border-radius: unset;
+    border: none;
+    transform: unset;
+}
