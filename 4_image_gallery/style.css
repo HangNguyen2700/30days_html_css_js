@@ -1,0 +1,94 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background: #dadada;
+    overflow: hidden; /* de it's child chen len */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 1200px; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image{
+    width: 22%;
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.35s;
+}
+
+.image:hover img {
+    transform: scale(1.1);
+}
+
+.gallery{
+    width: 100%;
+    height:100%;
+    background: rgb(0, 0, 0, 0.6);
+    position: fixed; /* de hinh -> chinh giua + be */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+.gallery__content{
+    width: 70%;
+    height: 70%;
+
+}
+
+.control{
+    position: fixed;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.close{
+    top: 15px;
+    right: 15px;
+}
+
+.prev{
+    left: 15px;
+}
+
+.next{
+    right: 15px;
+}
+
+.show{
+    opacity: 1;
+    pointer-events: auto; /*  */
+    transform: scale(1);
+}
+
+.hide{
+    display: none;
+}
