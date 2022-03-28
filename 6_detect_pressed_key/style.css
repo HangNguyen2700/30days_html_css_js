@@ -1,0 +1,28 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: Poppins;
+    background-color: #17a2b8;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.alert{
+    font-size: 40px;
+    padding: 10px 40px;
+    border: none;
+    outline: none;
+    color: #17a2b8;
+    border-radius: 10px;
+    font-weight: 600px;
+}
