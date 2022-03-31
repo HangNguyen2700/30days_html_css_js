@@ -20,7 +20,38 @@ body{
     background: url(assets/hot.jpeg) no-repeat center/cover;
     border-radius: 10px;
     padding: 30px 20px 20px;
+}
 
+.hot{
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url(assets/hot.jpeg) no-repeat center/cover;
+}
+
+.hot #weather{
+    background: url(assets/hot.jpeg) no-repeat center/cover;
+}
+
+.warm{
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url(assets/warm.jpeg) no-repeat center/cover;
+}
+
+.warm #weather{
+    background: url(assets/warm.jpeg) no-repeat center/cover;
+}
+
+.cool{
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url(assets/cool.jpeg) no-repeat center/cover;
+}
+
+.cool #weather{
+    background: url(assets/cool.jpeg) no-repeat center/cover;
+}
+
+.cold{
+    background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.1)), url(assets/cold.jpeg) no-repeat center/cover;
+}
+
+.cold #weather{
+    background: url(assets/cold.jpeg) no-repeat center/cover;
 }
 
 .search{
@@ -44,6 +75,7 @@ body{
     text-align: center;
     color: white;
     margin: 40px 0;
+    transition: 0.4s;
 }
 
 .capital{
@@ -87,4 +119,9 @@ body{
 .more-desc div i{
     margin: 10px 0;
     font-size: 23px;
+}
+
+.hide{
+    visibility: hidden;
+    opacity: 0
 }
