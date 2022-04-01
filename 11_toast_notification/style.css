@@ -1,0 +1,75 @@
+:root{
+    --success: rgb(0, 128, 0);
+    --warning: rgb(255, 165, 0);
+    --error: rgb(255, 0, 0);
+
+    --success-light: rgb(0, 128, 0, 0.7);
+    --warning-light: rgb(255, 165, 0, 0.7);
+    --error-light: rgb(255, 0, 0, 0.7);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+}
+
+.control button{
+    
+    color: white;
+    font-size: 28px;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    padding: 20px;
+    margin: 0 10px;
+}
+
+.success{
+    background: var(--success);
+}
+
+.warning{
+    background: var(--warning);
+}
+
+.error{
+    background: var(--error);
+}
+
+.toasts{
+    position: fixed;
+    top: 10px;
+    right: 10px;
+}
+
+.toast{
+    padding: 20px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 23px;
+}
+
+.toast.success{
+    background: var(--success-light);
+}
+
+.toast.warning{
+    background: var(--warning-light);
+}
+
+.toast.error{
+    background: var(--error-light);
+}
