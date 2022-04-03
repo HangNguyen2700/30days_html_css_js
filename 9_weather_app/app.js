@@ -30,17 +30,17 @@ async function changeWeatherUI() {
         shortDesc.innerText = data.weather[0] ? data.weather[0].main : ''
         time.innerText = new Date().toLocaleString(data.sys.country)
     
-        body.setAttribute('class', 'hot')
+        
         if(temp<10){
             body.setAttribute('class', 'cold')
         }
-        if(temp<20){
+        else if(temp<20){
             body.setAttribute('class', 'cool')
         }
-        if(temp<29){
+        else if(temp<29){
             body.setAttribute('class', 'warm')
         }
-        else{
+        else {
             body.setAttribute('class', 'hot')
         }
 
@@ -48,7 +48,9 @@ async function changeWeatherUI() {
     } else {
         content.classList.add('hide')
     }
+
 }
+
 
 search.onkeypress = function(e) {
     if(e.code === 'Enter') {
