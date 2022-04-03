@@ -47,7 +47,7 @@ body{
     background: var(--error);
 }
 
-.toasts{
+#toasts{
     position: fixed;
     top: 10px;
     right: 10px;
@@ -55,11 +55,14 @@ body{
 
 .toast{
     padding: 20px 20px;
-    margin: 10px 0;
+    margin: 10px 10px;
     border: none;
     border-radius: 6px;
     color: white;
     font-size: 23px;
+    overflow: hidden;
+    position: relative;
+    animation: slide_show 3s ease forwards ;
 }
 
 .toast.success{
@@ -72,4 +75,64 @@ body{
 
 .toast.error{
     background: var(--error-light);
+}
+
+.toast .countdown{
+    position: absolute;
+    height: 4px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    animation: 5s countdown ease forwards; /* luu lai last value of keyframes when ended */
+}
+
+.toast.success .countdown{
+    background: var(--success);
+}
+
+.toast.warning .countdown{
+    background: var(--warning);
+}
+
+.toast.error .countdown{
+    background: var(--error);
+}
+
+@keyframes countdown {
+    100%{
+        width: 0%;
+    }
+    0%{
+        width: 100%;
+    }
+}
+
+@keyframes slide_show {
+    0%{
+        transform: translateX(100%);
+    }
+    25%{
+        transform: translateX(-20px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide_hide {
+    0%{
+        transform: translateX(0);
+    }
+    25%{
+        transform: translateX(10px);
+    }
+    50%{
+        transform: translateX(-20px);
+    }
+    100%{
+        transform: translateX(200%);
+    }
 }
